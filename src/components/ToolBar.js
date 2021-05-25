@@ -18,23 +18,37 @@ const ToolBar = (
         confirmDisabled,
     }
 ) => (
-    <View style={[toolBarStyles.view, style]}>
-        <TouchableOpacity
-            title={cancelText}
-            disabled={cancelDisabled}
-            activeOpacity={cancelStyle && cancelStyle.activeOpacity || 0.2}
-            onPress={() => cancel && typeof cancel === 'function' && cancel()}
-        >
-            <Text style={[toolBarStyles.cancelText, cancelStyle]}>{cancelText}</Text>
-        </TouchableOpacity>
-        {titleText ? <Text style={[toolBarStyles.title, titleStyle]}>{titleText}</Text> : null}
+    <View style={[style]}>
+       
+        {/* {titleText ? <Text style={[toolBarStyles.title, titleStyle]}>{titleText}</Text> : null} */}
         <TouchableOpacity
             title={confirmText}
             disabled={confirmDisabled}
             activeOpacity={confirmStyle && confirmStyle.activeOpacity || 0.2}
             onPress={() => confirm && typeof confirm === 'function' && confirm()}
+            style={{
+                borderBottomLeftRadius:10,
+                borderBottomRightRadius:10,
+                borderTopColor:'#eaeaea',
+                borderTopWidth:1,
+                overflow:'hidden',
+                marginTop:0,
+            }}
         >
             <Text style={[toolBarStyles.confirmText, confirmStyle]}>{confirmText}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+            title={cancelText}
+            disabled={cancelDisabled}
+            style={{
+                borderRadius:10,
+                overflow:'hidden',
+                marginTop:8,
+            }}
+            activeOpacity={cancelStyle && cancelStyle.activeOpacity || 0.2}
+            onPress={() => cancel && typeof cancel === 'function' && cancel()}
+        >
+            <Text style={[toolBarStyles.cancelText, cancelStyle]}>{cancelText}</Text>
         </TouchableOpacity>
     </View>
 );
