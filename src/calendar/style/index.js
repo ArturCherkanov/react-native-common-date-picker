@@ -1,32 +1,27 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 export const toolBarStyles = StyleSheet.create({
     view: {
-        flexDirection: 'row',
-        paddingTop: 8,
-        paddingBottom: 8,
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        borderTopLeftRadius: 5,
-        borderTopRightRadius: 5,
-        backgroundColor: 'white',
-        borderBottomWidth: 0.5,
-        borderBottomColor: '#d3d3d3',
+
     },
     title: {
         fontSize: 17,
     },
     cancelText: {
-        paddingVertical: 5,
+        fontSize: 18,
+        textAlign: 'center',
+        paddingVertical: 20,
         paddingHorizontal: 15,
-        color: 'gray',
-        fontSize: 16,
+        borderRadius: 1,
+        borderWidth:0,
+        borderColor: 'red'
+
     },
     confirmText: {
-        paddingVertical: 5,
-        paddingHorizontal: 15,
+        paddingVertical: 20,
         color: 'blue',
-        fontSize: 16,
+        fontSize: 18,
+        textAlign: 'center'
     },
 });
 

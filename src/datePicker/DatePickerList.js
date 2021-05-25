@@ -237,7 +237,7 @@ class DatePickerList extends Component {
                 <View pointerEvents={'box-none'} style={this._lineStyle(BORDER_LINE_POSITION.BOTTOM)}/>
                 <FlatList
                     ref={ref => this.flatList = ref}
-                    style={this._getFlatListStyle()}
+                    style={{...this._getFlatListStyle()}}
                     data={data}
                     initialScrollIndex={Math.min(initialScrollIndex, maxScrollIndex)}
                     getItemLayout={(data, index) => ({length: rowHeight, offset: index * rowHeight, index})}
